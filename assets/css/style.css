@@ -1,0 +1,198 @@
+/*ESTILO GERAL DO SITE*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 20px auto;
+}
+
+.flex {
+    display: flex;
+}
+
+
+:root {
+    --primary-color: rgb(255, 255, 255);
+    --secund-color: rgba(107, 107, 107, 0.247);
+    --Button-color: rgb(0, 0, 0);
+    --Button-color2: rgba(3, 168, 44, 0.295);
+    --primary-color-darker: rgb(50, 207, 11);
+    --container-color: rgb(50, 207, 11);
+  }  
+
+  button:hover, form .btn-enviar input[type=submit]:hover {
+    box-shadow: 0 0 10px #D2691E; 
+    transform: scale(1.05);
+}
+
+
+/* ESTILO DO CABEÇALHO */
+
+header{
+    padding: 0 4%;
+    background-color: #000;
+}
+
+header.menu-fixed {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+    top: 0; /*Zera o topo*/
+    left: 0; /*Zera a esquerda*/
+    right: 0; /*Zera o direita*/
+    width: 100%; /*coloca com 100% da lagura da janela*/
+    box-shadow: 0 0 10px 3px #ffffff2d; /*Cria a sombra de destaque entre as paginas*/
+}
+
+
+header > .interface > h1 { /*Procura diretamente os elementos dentro do header com a classe interface*/
+    color: rgb(228, 132, 7) ;
+}
+
+/*ESTILO DO FORMULÁRIO*/
+
+
+section.formulario {
+    padding: 0 4%;
+    padding-top: 100px;
+    padding-bottom: 10px;
+}
+
+form{
+    max-width: 500px;
+    height: 550px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.input-single{
+    position: relative;
+    margin: 10px 0;
+}
+
+.input-single label{
+    color: #D2691E;
+    position: absolute;
+    left: 10px;
+    bottom: 5px;
+    transition: all 0.2s; /*Faz a transição da label quando clica nela*/
+    cursor: text; /*Para o cursor ficar igual quando tiver em cima da label*/
+}
+
+form .input-single .input:focus ~ label, 
+form .input-single .input:valid ~ label { /*Quando o usuario tiver focando na caixa de texto quero que ocorra alguma ação aplicada aos labels*/
+    transform: translateY(-44px);
+    font-size: 10px;
+    color: #D2691E;
+}
+
+form input{
+    width: 100%;
+    background-color: #333333;
+    border: 0;
+    outline: 0;
+    padding: 20px 10px 20px 20px;
+    border-radius: 10px;
+    color: rgb(228, 132, 7);
+    font-size: 18px;
+}
+
+
+form .btn-enviar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input[type=submit] {
+    width: 200px;
+    background-color: #D2691E;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+form p{
+    color: #D2691E;
+    text-align: center;
+}
+
+form #resultado {
+    color: rgb(255, 255, 255);
+};
+
+
+
+.paragrafo-resultado {
+    background: #04d404b7;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.bad {
+    background: #ff140394;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+
+/*ESTILO DO RODA PÉ*/
+
+footer {
+    padding: 10px 4%;
+    box-shadow: 0 0 10px 3px #ffffff2d; /*Cria a sombra de destaque entre as paginas*/
+}
+
+footer .flex{
+    justify-content: space-between;
+}
+
+.btn-social button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #D2691E;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: 0.2s;
+}
+
+.line-footer{
+    padding: 2px 2px;
+    text-align: center;
+}
+
+.borda{
+    border-top: 2px solid #D2691E ; /*Coloca a borda somente em cima*/
+}
+
+footer .line-footer p i {
+    color: #D2691E;
+    font-size: 22px;
+}
+
+footer .line-footer p a{
+    color: #fff;
+}
