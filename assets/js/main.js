@@ -23,7 +23,7 @@ form.addEventListener('submit', function (e) { //Escuta o submit, cria uma funç
     const nivelImc = getNivelObesidade (imc);
 
     if (imc > 0 && imc < 200){
-    const msg = `Seu IMC é: ${imc} e voçê está: ${nivelImc}`;
+    const msg = `Seu IMC é: ${imc} e você está: ${nivelImc}`;
     setResultado (msg, true);
     }else {
         const msg = 'O Valor digitado está Fora da realidade';
